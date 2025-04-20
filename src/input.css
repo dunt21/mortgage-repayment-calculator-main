@@ -4,3 +4,12 @@
   src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf"),
     url("../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
 }
+
+.p-color {
+  color: hsl(200, 24%, 40%);
+}
+
+.deep-color {
+  color: hsl(202, 55%, 16%);
+  border-color: hsl(200, 24%, 40%);
+}

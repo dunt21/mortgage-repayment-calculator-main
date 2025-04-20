@@ -8,16 +8,11 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
-    --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -305,6 +300,13 @@
 @font-face {
   font-family: "PlusJakartaSans";
   src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf"), url("../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+.p-color {
+  color: hsl(200, 24%, 40%);
+}
+.deep-color {
+  color: hsl(202, 55%, 16%);
+  border-color: hsl(200, 24%, 40%);
 }
 @property --tw-border-style {
   syntax: "*";

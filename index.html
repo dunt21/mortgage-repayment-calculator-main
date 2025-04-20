@@ -27,20 +27,22 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body class="font-[PlusJakartaSans] my-10 px-6 w-[100%] h-screen">
-    <h2 class="font-bold text-2xl mb-2">Mortgage Calculator</h2>
-    <button class="border-b">Clear All</button>
+    <h2 class="font-bold text-2xl mb-2 p-color deep-color">
+      Mortgage Calculator
+    </h2>
+    <button class="p-color border-b">Clear All</button>
 
     <form class="my-7">
       <section>
-        <p class="mb-2">Mortgage Amount</p>
+        <p class="mb-2 p-color">Mortgage Amount</p>
         <input type="number" class="border rounded-sm w-full h-10 mb-7" />
       </section>
       <section>
-        <p class="mb-2">Mortgage Term</p>
+        <p class="mb-2 p-color">Mortgage Term</p>
         <input type="number" class="border rounded-sm w-full h-10 mb-7" />
       </section>
       <section>
-        <p class="mb-2">Interest Rate</p>
+        <p class="mb-2 p-color">Interest Rate</p>
         <input type="number" class="border rounded-sm w-full h-10 mb-7" />
       </section>
 
@@ -48,7 +50,7 @@
         <p class="mb-1">Mortgage Type</p>
         <div class="flex flex-col">
           <label
-            class="border py-2 px-5 mb-2 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem]"
+            class="deep-color border py-2 px-5 mb-2 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem]"
           >
             <input
               type="checkbox"
@@ -60,7 +62,7 @@
             Repayment</label
           >
           <label
-            class="border py-2 px-5 mb-5 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem]"
+            class="deep-color border py-2 px-5 mb-5 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem]"
           >
             <input
               type="checkbox"
@@ -74,7 +76,7 @@
       </section>
 
       <button
-        class="w-full text-center justify-center border px-10 py-3 rounded-3xl font-bold inline-flex gap-2"
+        class="deep-color w-full text-center justify-center border px-10 py-3 rounded-3xl font-bold inline-flex gap-2"
       >
         <img src="./assets/images/icon-calculator.svg" />
         Calculate Repayments
@@ -87,7 +89,7 @@
     >
       <img src="./assets/images/illustration-empty.svg" />
       <h2 class="font-bold text-2xl">Results shown here</h2>
-      <p>
+      <p class="p-color">
         Complete the form and click “calculate repayments” to see what your
         monthly repayments would be.
       </p>
