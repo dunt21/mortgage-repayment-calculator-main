@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="font-[PlusJakartaSans] my-10 px-6 w-[100%] h-screen">
+    <h2 class="font-bold text-2xl mb-2">Mortgage Calculator</h2>
+    <button class="border-b">Clear All</button>
+
+    <form class="my-7">
+      <section>
+        <p class="mb-2">Mortgage Amount</p>
+        <input type="number" class="border rounded-sm w-full h-10 mb-7" />
+      </section>
+      <section>
+        <p class="mb-2">Mortgage Term</p>
+        <input type="number" class="border rounded-sm w-full h-10 mb-7" />
+      </section>
+      <section>
+        <p class="mb-2">Interest Rate</p>
+        <input type="number" class="border rounded-sm w-full h-10 mb-7" />
+      </section>
+
+      <section>
+        <p class="mb-1">Mortgage Type</p>
+        <div class="flex flex-col">
+          <label
+            class="border py-2 px-5 mb-2 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem]"
+          >
+            <input
+              type="checkbox"
+              name="calculation"
+              value="repayment"
+              class="appearance-none w-5 h-5 border rounded-full"
+            />
+
+            Repayment</label
+          >
+          <label
+            class="border py-2 px-5 mb-5 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem]"
+          >
+            <input
+              type="checkbox"
+              name="calculation"
+              value="interest"
+              class="appearance-none w-5 h-5 border rounded-full"
+            />
+            Interest Only</label
+          >
+        </div>
+      </section>
+
+      <button
+        class="w-full text-center justify-center border px-10 py-3 rounded-3xl font-bold inline-flex gap-2"
+      >
+        <img src="./assets/images/icon-calculator.svg" />
+        Calculate Repayments
+      </button>
+    </form>
+
+    <!-- Empty results start -->
+    <section
+      class="flex flex-col items-center justify-center gap-4 text-center"
+    >
+      <img src="./assets/images/illustration-empty.svg" />
+      <h2 class="font-bold text-2xl">Results shown here</h2>
+      <p>
+        Complete the form and click “calculate repayments” to see what your
+        monthly repayments would be.
+      </p>
+    </section>
+
+    <!-- Empty results end -->
+
+    <!-- Completed results start -->
+    <section class="hidden">
+      Your results Your results are shown below based on the information you
+      provided. To adjust the results, edit the form and click “calculate
+      repayments” again. Your monthly repayments Total you'll repay over the
+      term
+
+      <!-- Completed results end -->
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
