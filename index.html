@@ -26,115 +26,133 @@
     </style>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body class="font-[PlusJakartaSans] my-10  w-[100%] h-screen">
-    <section class="px-6">
-      <h2 class="font-bold text-2xl mb-2 p-color deep-color">
-        Mortgage Calculator
-      </h2>
-      <button class="p-color border-b cursor-pointer hover:!text-[hsl(202,55%,16%)]">Clear All</button>
-  
-      <form class="my-7">
-        <section  >
-         <p class="mb-2 p-color">Mortgage Amount</p>
-          <label 
-          class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)]  hover:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
-          > 
-            <span class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-12 flex items-center justify-center group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]">£</span>
-  
-            <input
-            type="number"
-            class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]  "
-          />
-     
-          </label>
-         
-        </section>
-    
-     
-        <section>
-          <p class="mb-2 p-color">Mortgage Term</p>
-          <label 
-          class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)]  hover:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
-          > 
-          
-          <input
-          type="number"
-          class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]"
-          />
-          <span class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-24 flex items-center justify-center group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]">years</span>
-     
-          </label>
-        </section>
-        <section>
-          <p class="mb-2 p-color">Interest Rate</p>
-          <label 
-          class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)]  hover:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
-          > 
-          
-          <input
-          type="number"
-          class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]"
-          />
-          <span class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-14 flex items-center justify-center group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]">%</span>
-     
-          </label>
-        </section>
-  
-        <section>
-          <p class="mb-1 p-color">Mortgage Type</p>
-          <div class="flex flex-col">
+  <body
+    class="font-[PlusJakartaSans] my-10 w-[100%] h-screen lg:flex lg:justify-center lg:items-center lg:bg-[hsl(202,86%,94%)] lg:my-0"
+  >
+    <div
+      class="lg:flex lg:w-[60%] lg:items-center lg:justify-center lg:h-[78%] lg:bg-white lg:border-none lg:rounded-3xl lg:overflow-hidden"
+    >
+      <section class="px-6 lg:px-10">
+        <div class="lg:flex lg:justify-between">
+          <h2 class="font-bold text-2xl mb-2 p-color deep-color">
+            Mortgage Calculator
+          </h2>
+          <button
+            class="p-color border-b cursor-pointer hover:!text-[hsl(202,55%,16%)]"
+          >
+            Clear All
+          </button>
+        </div>
+
+        <form class="my-7">
+          <section>
+            <p class="mb-2 p-color">Mortgage Amount</p>
             <label
-              class=" deep-color cursor-pointer border py-2 px-5 mb-2 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem] hover:!border-[hsl(61,70%,52%)] hover:!border-2 has-checked:!border-[hsl(61,70%,52%)] has-checked:bg-[hsl(61,70%,52%,0.2)]"
+              class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)] hover:!border-2 peer-invalid:!border-[hsl(4,69%,50%)] peer-invalid:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
             >
+              <span
+                class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-12 flex items-center justify-center peer-invalid:!bg-[hsl(4,69%,50%)] peer-invalid:!text-[hsl(4,69%,50%)] group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]"
+                >£</span
+              >
 
               <input
-                type="radio"
-                name="radio"
-                value="repayment"
-                class="appearance-none w-5 h-5 border rounded-full checked:border-[hsl(61,70%,52%)] checked:border-2"
-             
-                />
-  
-              Repayment</label
-            >
-            <label
-              class="deep-color cursor-pointer border py-2 px-5 mb-6 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem] hover:!border-[hsl(61,70%,52%)] hover:!border-2 has-checked:!border-[hsl(61,70%,52%)] has-checked:bg-[hsl(61,70%,52%,0.2)] "
-            >
-              <input
-                type="radio"
-                name="radio"
-                value="interest"
-                class=" appearance-none w-5 h-5 border rounded-full  peer checked:border-[hsl(61,70%,52%)] checked:border-2 "
+                type="number"
+                required
+                class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)] peer"
               />
-              Interest Only</label
-            >
+            </label>
+          </section>
+          <div class="lg:flex lg:gap-6">
+            <section>
+              <p class="mb-2 p-color">Mortgage Term</p>
+              <label
+                class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)] hover:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
+              >
+                <input
+                  type="number"
+                  class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]"
+                />
+                <span
+                  class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-24 flex items-center justify-center group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]"
+                  >years</span
+                >
+              </label>
+              <p class="font-bold text-[hsl(4,69%,50%)] mb-7 hidden">
+                This field is required
+              </p>
+            </section>
+            <section>
+              <p class="mb-2 p-color">Interest Rate</p>
+              <label
+                class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)] hover:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
+              >
+                <input
+                  type="number"
+                  class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]"
+                />
+                <span
+                  class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-14 flex items-center justify-center group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]"
+                  >%</span
+                >
+              </label>
+              <p class="font-bold text-[hsl(4,69%,50%)] mb-7 hidden">
+                This field is required
+              </p>
+            </section>
           </div>
-        </section>
-  
-        <button
-          class="deep-color cursor-pointer w-full text-center justify-center border-0 bg-[hsl(61,70%,52%)]  px-5 py-3 rounded-3xl font-bold inline-flex gap-2 hover:!bg-[hsl(61,70%,52%,0.7)] "
-        >
-          <img src="./assets/images/icon-calculator.svg" />
-          Calculate Repayments
-        </button>
-      </form>
-  
-    </section>
-   
-    <!-- Empty results start -->
-    <section class="bg-[hsl(202,55%,16%)] flex flex-col items-center justify-center gap-4 py-8 text-center px-10"
-    >
-      
-      <img src="./assets/images/illustration-empty.svg" />
-      <h2 class="font-bold text-2xl text-[hsl(0,0%,100%)]">Results shown here</h2>
-      <p class="text-[hsl(203,41%,72%)] text-[15px]">
-        Complete the form and click “calculate repayments” to see what your
-        monthly repayments would be.
-      </p>
-  
-    </section>
-    
-    </section>
+
+          <section>
+            <p class="mb-1 p-color">Mortgage Type</p>
+            <div class="flex flex-col">
+              <label
+                class="deep-color cursor-pointer border py-2 px-5 mb-2 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem] hover:!border-[hsl(61,70%,52%)] hover:!border-2 has-checked:!border-[hsl(61,70%,52%)] has-checked:bg-[hsl(61,70%,52%,0.2)]"
+              >
+                <input
+                  type="radio"
+                  name="radio"
+                  value="repayment"
+                  class="appearance-none w-5 h-5 border rounded-full checked:border-[hsl(61,70%,52%)] checked:border-2"
+                />
+
+                Repayment</label
+              >
+              <label
+                class="deep-color cursor-pointer border py-2 px-5 mb-6 rounded-sm inline-flex items-center gap-3 font-semibold text-[1.1rem] hover:!border-[hsl(61,70%,52%)] hover:!border-2 has-checked:!border-[hsl(61,70%,52%)] has-checked:bg-[hsl(61,70%,52%,0.2)] lg:mb-10"
+              >
+                <input
+                  type="radio"
+                  name="radio"
+                  value="interest"
+                  class="appearance-none w-5 h-5 border rounded-full peer checked:border-[hsl(61,70%,52%)] checked:border-2"
+                />
+                Interest Only</label
+              >
+            </div>
+          </section>
+
+          <button
+            class="deep-color cursor-pointer w-full text-center justify-center border-0 bg-[hsl(61,70%,52%)] px-5 py-3 rounded-3xl font-bold inline-flex gap-2 hover:!bg-[hsl(61,70%,52%,0.7)] lg:w-[60%]"
+          >
+            <img src="./assets/images/icon-calculator.svg" />
+            Calculate Repayments
+          </button>
+        </form>
+      </section>
+
+      <!-- Empty results start -->
+      <section
+        class="bg-[hsl(202,55%,16%)] flex flex-col items-center justify-center gap-4 py-8 text-center px-10 lg:h-full lg:w-[65%] lg:border-b"
+      >
+        <img src="./assets/images/illustration-empty.svg" />
+        <h2 class="font-bold text-2xl text-[hsl(0,0%,100%)]">
+          Results shown here
+        </h2>
+        <p class="text-[hsl(203,41%,72%)] text-[15px]">
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </section>
+    </div>
 
     <!-- Empty results end -->
 
@@ -147,7 +165,5 @@
 
       <!-- Completed results end -->
     </section>
-
-   
   </body>
 </html>
