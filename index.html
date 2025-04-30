@@ -32,7 +32,7 @@
     <div
       class="lg:flex lg:w-[60%] lg:items-center lg:justify-center lg:h-[78%] lg:bg-white lg:border-none lg:rounded-3xl lg:overflow-hidden"
     >
-      <section class="px-6 lg:px-10">
+      <section class="px-6 lg:px-10 lg:pt-5">
         <div class="lg:flex lg:justify-between">
           <h2 class="font-bold text-2xl mb-2 p-color deep-color">
             Mortgage Calculator
@@ -44,7 +44,7 @@
           </button>
         </div>
 
-        <form class="my-7">
+        <form class="my-7" novalidate>
           <section>
             <p class="mb-2 p-color">Mortgage Amount</p>
             <label
@@ -70,7 +70,8 @@
               >
                 <input
                   type="number"
-                  class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]"
+                  required
+                  class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)] peer"
                 />
                 <span
                   class="bg-[hsl(202,86%,94%)] font-bold text-[hsl(200,24%,40%)] w-24 flex items-center justify-center group-focus-within:bg-[hsl(61,70%,52%)] group-focus-within:!text-[hsl(202,55%,16%)]"
@@ -87,6 +88,7 @@
                 class="border rounded-sm flex w-full h-12 mb-7 deep-color cursor-pointer hover:!border-[hsl(202,55%,16%)] hover:!border-2 focus-within:!border-[hsl(61,70%,52%)] focus-within:!border-2 hover:focus-within:!border-[hsl(61,70%,52%)] group"
               >
                 <input
+                  required
                   type="number"
                   class="outline-none w-full pl-2 font-bold caret-[hsl(202,55%,16%)]"
                 />
@@ -111,7 +113,7 @@
                   type="radio"
                   name="radio"
                   value="repayment"
-                  class="appearance-none w-5 h-5 border rounded-full checked:border-[hsl(61,70%,52%)] checked:border-2"
+                  class="appearance-none w-5 h-5 border rounded-full checked:border-[hsl(61,70%,52%)] checked:border-2 checked:bg-[radial-gradient(circle,_hsl(61,70%,52%)_40%,_rgba(255,255,255,0.1)_30%)]"
                 />
 
                 Repayment</label
@@ -123,7 +125,7 @@
                   type="radio"
                   name="radio"
                   value="interest"
-                  class="appearance-none w-5 h-5 border rounded-full peer checked:border-[hsl(61,70%,52%)] checked:border-2"
+                  class="appearance-none w-5 h-5 border rounded-full peer checked:border-[hsl(61,70%,52%)] checked:border-2 checked:bg-[radial-gradient(circle,_hsl(61,70%,52%)_40%,_rgba(255,255,255,0.1)_30%)]"
                 />
                 Interest Only</label
               >
@@ -131,7 +133,7 @@
           </section>
 
           <button
-            class="deep-color cursor-pointer w-full text-center justify-center border-0 bg-[hsl(61,70%,52%)] px-5 py-3 rounded-3xl font-bold inline-flex gap-2 hover:!bg-[hsl(61,70%,52%,0.7)] lg:w-[60%]"
+            class="deep-color cursor-pointer w-full text-center justify-center border-0 bg-[hsl(61,70%,52%)] px-5 py-3 rounded-3xl font-bold inline-flex gap-2 hover:!bg-[hsl(61,70%,52%,0.7)] lg:w-[70%]"
           >
             <img src="./assets/images/icon-calculator.svg" />
             Calculate Repayments
@@ -140,30 +142,50 @@
       </section>
 
       <!-- Empty results start -->
-      <section
-        class="bg-[hsl(202,55%,16%)] flex flex-col items-center justify-center gap-4 py-8 text-center px-10 lg:h-full lg:w-[65%] lg:border-b"
+      <div
+        class="bg-[hsl(202,55%,16%)] flex flex-col items-center justify-center gap-4 py-8 text-center px-5 lg:h-full lg:w-[65%] lg:border-b"
       >
-        <img src="./assets/images/illustration-empty.svg" />
-        <h2 class="font-bold text-2xl text-[hsl(0,0%,100%)]">
-          Results shown here
-        </h2>
-        <p class="text-[hsl(203,41%,72%)] text-[15px]">
-          Complete the form and click “calculate repayments” to see what your
-          monthly repayments would be.
-        </p>
-      </section>
+        <section class="hidden">
+          <img src="./assets/images/illustration-empty.svg" />
+          <h2 class="font-bold text-2xl text-[hsl(0,0%,100%)]">
+            Results shown here
+          </h2>
+          <p class="text-[hsl(203,41%,72%)] text-[15px]">
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </section>
+        <section class="text-left">
+          <p class="text-white font-semibold text-xl mb-5">Your results</p>
+          <p class="text-[hsl(203,41%,72%)] text-[15px] mb-5 leading-5">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+          <div
+            class="border-t-5 border-[hsl(61,70%,52%)] rounded-lg bg-black/25 backdrop-blur-lg py-5 px-4"
+          >
+            <p class="text-[hsl(203,41%,72%)] text-[15px]">
+              Your monthly repayments
+            </p>
+            <p class="text-[hsl(61,70%,52%)] text-4xl font-bold my-3">
+              £1,797.74
+            </p>
+            <div class="border-t border-[hsl(200,24%,40%)]">
+              <p class="text-[hsl(203,41%,72%)] text-[15px] mt-4 mb-2">
+                Total you'll repay over the term
+              </p>
+              <p class="font-bold text-white text-2xl">£539,322.94</p>
+            </div>
+          </div>
+
+          <!-- Completed results end -->
+        </section>
+      </div>
     </div>
 
     <!-- Empty results end -->
 
     <!-- Completed results start -->
-    <section class="hidden">
-      Your results Your results are shown below based on the information you
-      provided. To adjust the results, edit the form and click “calculate
-      repayments” again. Your monthly repayments Total you'll repay over the
-      term
-
-      <!-- Completed results end -->
-    </section>
   </body>
 </html>
