@@ -15,4 +15,14 @@
     color: hsl(202, 55%, 16%);
     border-color: hsl(200, 24%, 40%);
   }
+
+  .label-error {
+    border: 1px solid hsl(4, 69%, 50%) !important;
+    margin-bottom: 8px !important;
+  }
+
+  .span-error {
+    background-color: hsl(4, 69%, 50%) !important;
+    color: white !important;
+  }
 }
