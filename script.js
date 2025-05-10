@@ -41,6 +41,8 @@ userForm.addEventListener("submit", (e) => {
   const span = document.querySelectorAll("span");
   const errorMsg = document.querySelectorAll(".error-msg");
   console.log(errorMsg);
+  const optDiv = document.querySelector(".options");
+
   let isFilled = true;
 
   inputArea.forEach((input) => {
@@ -60,11 +62,15 @@ userForm.addEventListener("submit", (e) => {
       error.classList.remove("hidden");
     });
 
-    interestLabel.classList.contains("mb-6")
-      ? interestLabel.classList.remove("mb-6")
-      : interestLabel.classList.remove("mb-10");
+    // interestLabel.classList.contains("mb-6")
+    //   ? interestLabel.classList.remove("mb-6")
+    //   : interestLabel.classList.remove("mb-10");
 
-    interestLabel.classList.add("mb-2");
+    // interestLabel.classList.add("mb-2");
+
+    if (optDiv.document.querySelector("p")) {
+      interestLabel.classList.remove("mb-6", "mb-10");
+    }
   } else {
     inputLabel.forEach((label) => {
       label.classList.remove("label-error");
@@ -78,20 +84,14 @@ userForm.addEventListener("submit", (e) => {
       error.classList.add("hidden");
     });
 
-    !interestLabel.classList.contains("mb-6")
-      ? interestLabel.classList.add("mb-6")
-      : interestLabel.classList.add("mb-10");
-
-    interestLabel.classList.remove("mb-2");
-
     const amt = Number(mortgageAmt.value);
     const term = mortgageTerm.value * 12;
     const rate = mortgageRate.value / 12;
   }
 });
 
-const monthlyPay = (amt * rate) / 1 - Math.pow(1 + rate, -term);
-const termPay = monthlyPay * term;
+// const monthlyPay = (amt * rate) / 1 - Math.pow(1 + rate, -term);
+// const termPay = monthlyPay * term;
 
-const monthlyInterest = amt * rate;
-const yearlyInterest = monthlyInterest * term;
+// const monthlyInterest = amt * rate;
+// const yearlyInterest = monthlyInterest * term;

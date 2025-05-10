@@ -27,12 +27,12 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body
-    class="font-[PlusJakartaSans] my-10 w-[100%] min-h-screen lg:flex lg:justify-center lg:items-center lg:bg-[hsl(202,86%,94%)] lg:my-0"
+    class="font-[PlusJakartaSans] mt-10 w-[100%] min-h-screen lg:flex lg:justify-center lg:items-center lg:bg-[hsl(202,86%,94%)] lg:my-0"
   >
     <div
-      class="lg:flex lg:w-[60%] lg:items-center lg:justify-center lg:h-[78%] lg:bg-white lg:border-none lg:rounded-3xl lg:overflow-hidden"
+      class=" lg:grid lg:grid-cols-2  lg:w-[75%] lg:justify-center lg:h-[78%] lg:bg-white lg:border-none lg:rounded-3xl lg:overflow-hidden"
     >
-      <section class="px-6 lg:px-10 lg:pt-5">
+      <section class="px-6  lg:px-10 lg:py-8">
         <div class="lg:flex lg:justify-between">
           <h2 class="font-bold text-2xl mb-2 p-color deep-color">
             Mortgage Calculator
@@ -45,7 +45,7 @@
           </button>
         </div>
 
-        <form class="my-7" id="user-form" novalidate>
+        <form class="mt-7" id="user-form" novalidate>
           <section>
             <p class="mb-2 p-color">Mortgage Amount</p>
             <label
@@ -156,10 +156,13 @@
       </section>
 
       <!-- Empty results start -->
-      <div
-        class="bg-[hsl(202,55%,16%)] flex flex-col items-center justify-center gap-4 py-8 text-center px-5 lg:h- lg:w-[65%] lg:border-b"
+      <section
+        class="bg-[hsl(202,55%,16%)]  w-full h-full gap-4 py-8 text-center px-5 lg:border lg:rounded-bl-[5rem]"
       >
-        <section class="w-full h-full" id="start">
+        <div
+          class="w-full h-full flex flex-col gap-3 items-center justify-center hidden"
+          id="start"
+        >
           <img src="./assets/images/illustration-empty.svg" class="" />
           <h2 class="font-bold text-2xl text-[hsl(0,0%,100%)]">
             Results shown here
@@ -168,8 +171,8 @@
             Complete the form and click “calculate repayments” to see what your
             monthly repayments would be.
           </p>
-        </section>
-        <section class="text-left hidden" id="end">
+        </div>
+        <div class="text-left lg:px-5" id="end">
           <p class="text-white font-semibold text-xl mb-5">Your results</p>
           <p class="text-[hsl(203,41%,72%)] text-[15px] mb-5 leading-5">
             Your results are shown below based on the information you provided.
@@ -177,19 +180,19 @@
             repayments” again.
           </p>
           <div
-            class="border-t-5 border-[hsl(61,70%,52%)] rounded-lg bg-black/25 backdrop-blur-lg py-5 px-4"
+            class="border-t-5 border-[hsl(61,70%,52%)] rounded-lg bg-black/25 backdrop-blur-lg py-5 px-4 lg:py-6 lg:px-7"
           >
             <p class="text-[hsl(203,41%,72%)] text-[15px]">
               Your monthly repayments
             </p>
             <p
-              class="text-[hsl(61,70%,52%)] text-4xl font-bold my-3"
+              class="text-[hsl(61,70%,52%)] text-4xl lg:text-5xl font-bold my-3 lg:my-8"
               id="monthly-pay"
             >
               £1,797.74
             </p>
             <div class="border-t border-[hsl(200,24%,40%)]">
-              <p class="text-[hsl(203,41%,72%)] text-[15px] mt-4 mb-2">
+              <p class="text-[hsl(203,41%,72%)] text-[15px] mt-8 mb-2">
                 Total you'll repay over the term
               </p>
               <p class="font-bold text-white text-2xl" id="total-pay">
@@ -199,6 +202,7 @@
           </div>
 
           <!-- Completed results end -->
+        </div>
         </section>
       </div>
     </div>
