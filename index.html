@@ -138,10 +138,12 @@
                 />
                 Interest Only</label
               >
-              <p class="font-bold text-[hsl(4,69%,50%)] mb-7 hidden error-msg">
+
+               <p class="font-bold text-[hsl(4,69%,50%)] mb-7 hidden error-msg">
                 This field is required
               </p>
             </div>
+             
           </section>
 
           <button
@@ -160,21 +162,21 @@
         class="bg-[hsl(202,55%,16%)]  w-full h-full gap-4 py-8 text-center px-5 lg:border lg:rounded-bl-[5rem]"
       >
         <div
-          class="w-full h-full flex flex-col gap-3 items-center justify-center hidden"
+          class="w-full h-full flex flex-col gap-3 items-center justify-center "
           id="start"
         >
           <img src="./assets/images/illustration-empty.svg" class="" />
           <h2 class="font-bold text-2xl text-[hsl(0,0%,100%)]">
             Results shown here
           </h2>
-          <p class="text-[hsl(203,41%,72%)] text-[15px]">
+          <p class="text-[hsl(203,41%,72%)] text-[15px] lg:px-4">
             Complete the form and click “calculate repayments” to see what your
             monthly repayments would be.
           </p>
         </div>
-        <div class="text-left lg:px-5" id="end">
+        <div class="text-left lg:px-5 hidden" id="end">
           <p class="text-white font-semibold text-xl mb-5">Your results</p>
-          <p class="text-[hsl(203,41%,72%)] text-[15px] mb-5 leading-5">
+          <p class="text-[hsl(203,41%,72%)] text-[15px] mb-8 leading-5">
             Your results are shown below based on the information you provided.
             To adjust the results, edit the form and click “calculate
             repayments” again.
