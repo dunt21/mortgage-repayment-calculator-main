@@ -8,12 +8,20 @@ const interestOptn = document.getElementById("interest");
 const calculateBtn = document.getElementById("calculate");
 const startSec = document.getElementById("start");
 const endSec = document.getElementById("end");
-const monthlyAmt = document.getElementById("monthly-pay").textContent;
-const yearlyAmt = document.getElementById("total-pay").textContent;
+const monthlyAmt = document.getElementById("monthly-pay");
+const yearlyAmt = document.getElementById("total-pay");
 const userForm = document.getElementById("user-form");
 
 function clearInput(input) {
   input.value = "";
+}
+
+function showAnimation(el1, el2) {
+  el1.classList.add("fade");
+  el1.classList.remove("show");
+
+  el2.classList.add("show");
+  el2.classList.remove("fade");
 }
 
 clearBtn.addEventListener("click", () => {
@@ -38,10 +46,15 @@ clearBtn.addEventListener("click", () => {
     errorMsg?.classList.add("hidden");
     interestLabel?.classList.add("mb-6", "lg:mb-10");
   });
+
+  showAnimation(endSec, startSec);
 });
 
+let mtgValue = 0;
 mortgageAmt.addEventListener("input", (e) => {
   const value = e.target.value.replace(/,/g, "").replace(/\D/g, "");
+  mtgValue = Number(value);
+
   const formattedValue = Intl.NumberFormat("en-US").format(value);
   e.target.value = formattedValue;
 });
@@ -85,13 +98,28 @@ userForm.addEventListener("submit", (e) => {
     interestLabel?.classList.add("mb-6", "lg:mb-10");
     interestLabel?.classList.remove("mb-3");
   }
-  const amt = Number(mortgageAmt.value);
+  const amt = mtgValue;
   const term = mortgageTerm.value * 12;
-  const rate = mortgageRate.value / 12;
+  const rate = mortgageRate.value / 100 / 12;
+
+  function displayResult(mthpay, ylypay) {
+    monthlyAmt.textContent = Intl.NumberFormat("en-us").format(mthpay);
+    yearlyAmt.textContent = Intl.NumberFormat("en-us").format(ylypay);
+  }
+
+  if (repaymentOptn.checked) {
+    const monthlyPay = ((amt * rate) / (1 - Math.pow(1 + rate, -term))).toFixed(
+      2
+    );
+    const termPay = (monthlyPay * term).toFixed(2);
+
+    displayResult(monthlyPay, termPay);
+  } else if (interestOptn.checked) {
+    const monthlyInterest = (amt * rate).toFixed(2);
+    const yearlyInterest = (monthlyInterest * term).toFixed(2);
+
+    displayResult(monthlyInterest, yearlyInterest);
+  }
+
+  showAnimation(startSec, endSec);
 });
-
-// const monthlyPay = (amt * rate) / 1 - Math.pow(1 + rate, -term);
-// const termPay = monthlyPay * term;
-
-// const monthlyInterest = amt * rate;
-// const yearlyInterest = monthlyInterest * term;
